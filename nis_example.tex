@@ -3,7 +3,7 @@
 \usepackage{ragged2e} % justyfing
 \usepackage[margin=0.5in]{geometry}
 
-\title{INCIDENT / ACCIDENT CLEARANCE STATEMENT \\[1ex] TEST No 1}
+\title{INCIDENT / ACCIDENT CLEARANCE STATEMENT \\[1ex] @DocNo}
 \date{}
 \author{}
 
@@ -17,7 +17,7 @@
 
 %\raggedright
 \justifying
-Aicraft @model, MSN @MSN, rego. @REG is managed by @org since @DATE_1 under approval number @AP_NO
+Aicraft @model, MSN @MSN, rego. @REG is managed by @org since @DATE1 under approval number @APNO
 \par
 The aircraft's configuration and utilization at present is as follows:
 \vspace{20pt}
@@ -27,19 +27,19 @@ The aircraft's configuration and utilization at present is as follows:
         \hline
          \textbf{Description} & \textbf{Type/Part No.} & \textbf{Serial No.} & \textbf{TSN [FH]} & \textbf{CSN [FC]}\\
          \hline
-         AIRCRAFT & [AC PN] & [AC SN] & [AC TSN] & [AC FC] \\
+         AIRCRAFT & @ACPN & @ACSN & @ACTSN & @ACFC \\
          \hline
-         LH ENGINE & [LHE PN] & [LHE SN] & [LHE TSN] & [LHE FC] \\
+         LH ENGINE & @LHEPN & @LHESN & @LHETSN & @LHEFC \\
          \hline
-         RH ENGINE & [RHE PN] & [RHE SN] & [RHE TSN] & [RHE FC] \\
+         RH ENGINE & @RHEPN & @RHESN & @RHETSN & @RHEFC \\
          \hline
-         APU ENGINE & [APU PN] & [APU SN] & [APU TSN] & [APU FC] \\
+         APU ENGINE & @APUPN & @APUSN & @APUTSN & @APUFC \\
          \hline
-         NOSE LANDING GEAR & [NLG PN] & [NLG SN] & [NLG TSN] & [NLG FC] \\
+         NOSE LANDING GEAR & @NLGPN & @NLGSN & @NLGTSN & @NLGFC \\
          \hline
-         LH LANDING GEAR & [LLG PN] & [LLG SN] & [LLG TSN] & [LLG FC] \\
+         LH LANDING GEAR & @LLGPN & @LLGSN & @LLGTSN & @LLGFC \\
          \hline
-         RH LANDING GEAR & [RLG PN] & [RLG SN] & [RLG TSN] & [RLG FC] \\
+         RH LANDING GEAR & @RLGPN & @RLGSN & @RLGTSN & @RLGFC \\
          \hline
     \end{tabular}
 \end{center}
@@ -65,18 +65,18 @@ The aircraft's configuration and utilization at present is as follows:
 
  \begin{tabular}{c c}
 
-      \textbf{Organisation:} & [ORG]\\
-      \textbf{Prepared by: } & [AUTHOR] \\
-      \textbf{Signed by: } & [SIGNER] \\
+      \textbf{Organisation:} & @ORG\\
+      \textbf{Prepared by: } & @AUTHOR \\
+      \textbf{Signed by: } & @SIGNER \\
       \textbf{Signature: } & \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\
  \end{tabular}
 
 \vspace{20pt}
 
 \begin{tabular}{c}
-     ORG FULL NAME \\
-     ORG ADDRESS \\
-     ORG LINK
+     @ORGFULLNAME \\
+     @ORGADDRESS \\
+     @ORGLINK
 \end{tabular}
 
 \end{document}

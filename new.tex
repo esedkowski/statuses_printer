@@ -1,41 +1,83 @@
+\documentclass{article}
 \usepackage{graphicx} % Required for inserting images
+\usepackage{ragged2e} % justyfing
 \usepackage[margin=0.5in]{geometry}
-\title{INCIDENT / ACCIDENT CLEARANCE STATEMENT \\[1ex] TEST No 1}
+
+\title{INCIDENT / ACCIDENT CLEARANCE STATEMENT \\[1ex] Test No. 1}
+\date{}
 \author{}
+
 \setlength{\tabcolsep}{15pt}
+\renewcommand{\arraystretch}{1.6}
 \pagenumbering{gobble}
+
 \begin{document}
+
 \maketitle
+
 %\raggedright
-Aicraft b737, MSN 123456, rego. AA-BBB is managed by MyOrg since 07.08.2024_1 under approval number TESTTEST_NO
+\justifying
+Aicraft b737, MSN 123456, rego. AA-BBB is managed by MyOrg since 07.08.20241 under approval number TESTTEST
+\par
 The aircraft's configuration and utilization at present is as follows:
+\vspace{20pt}
 
+\begin{center}
     \begin{tabular}{|c|c|c|c|c|}
+        \hline
          \textbf{Description} & \textbf{Type/Part No.} & \textbf{Serial No.} & \textbf{TSN [FH]} & \textbf{CSN [FC]}\\
-         AIRCRAFT & [AC PN] & [AC SN] & [AC TSN] & [AC FC] \\
-         LH ENGINE & [LHE PN] & [LHE SN] & [LHE TSN] & [LHE FC] \\
-         RH ENGINE & [RHE PN] & [RHE SN] & [RHE TSN] & [RHE FC] \\
-         APU ENGINE & [APU PN] & [APU SN] & [APU TSN] & [APU FC] \\
-         NOSE LANDING GEAR & [NLG PN] & [NLG SN] & [NLG TSN] & [NLG FC] \\
-         LH LANDING GEAR & [LLG PN] & [LLG SN] & [LLG TSN] & [LLG FC] \\
-         RH LANDING GEAR & [RLG PN] & [RLG SN] & [RLG TSN] & [RLG FC] \\
+         \hline
+         AIRCRAFT & B737 & 123456 & 1000:14 & 3535 \\
+         \hline
+         LH ENGINE & AAAA & BBBB & 000:00 & 0000 \\
+         \hline
+         RH ENGINE & AAAA & BBBB & 444:12 & 242424 \\
+         \hline
+         APU ENGINE & XXXXX & ZZZZ & 92024:12 & 4242 \\
+         \hline
+         NOSE LANDING GEAR & VVVV & MMMMM & 92024:12 & 4242 \\
+         \hline
+         LH LANDING GEAR & VVVV & MMMMM & 92024:12 & 4242 \\
+         \hline
+         RH LANDING GEAR & VVVV & MMMMM & 92024:12 & 4242 \\
+         \hline
     \end{tabular}
+\end{center}
 
+\vspace{20pt}
 
+ I hereby certify that, to the best of my knowledge, during the period stated above:
 
+ \vspace{10pt}
 
+ \begin{enumerate}
      \item Neither the aircraft, nor any part installed have been;
+     \begin{enumerate}
          \item damaged during, or identified as the root cause of, a reportable incident or accident as defined by Annex 13 to the Chicago Convention, or
+         \item subjected to severe stress or heat (such as in a major engine failure, accident, or fire) or has been submersed in salt water,
      \end{enumerate}
+     unless its airworthiness status was re-established by an approved maintenance organisation in accordance with the applicable airworthiness regulations and instructions of the type certificate holder and/or supplemental type certificate holder and/or OEM of the part, and supported by an authorised airworthiness release certificate.
 
+     \item No part has been installed on the aircraft which was obtained from a military source or was previously fitted to a state aircraft as deemed by Article 3 of the Chicago Convention.
  \end{enumerate}
+
 \vspace{20pt}
+
  \begin{tabular}{c c}
-      \textbf{Organisation:} & [ORG]\\
-      \textbf{Signed by: } & [SIGNER] \\
+
+      \textbf{Organisation:} & Awasome Company\\
+      \textbf{Prepared by: } & John \\
+      \textbf{Signed by: } & Cooler John \\
+      \textbf{Signature: } & \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\
  \end{tabular}
+
 \vspace{20pt}
+
 \begin{tabular}{c}
-     ORG ADDRESS \\
+     Awasome Company Inc. \\
+     IDK \\
+     awasome.Company.org
 \end{tabular}
+
 \end{document}
+
