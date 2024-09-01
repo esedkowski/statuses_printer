@@ -1,0 +1,2 @@
+\newcommand{\model}{b737}
+\newcommand{\reg}{XX-YYY}
