@@ -20,7 +20,7 @@
 
 %\raggedright
 \justifying
-Aicraft \model, MSN \MSN, reg. \registration is managed by organization since \dateSinceMenaged under approval number @APNO
+Aicraft \model, MSN \MSN, reg. \registration  is managed by organization since \dateSinceMenaged  under approval number \organizationApprovalNumber.
 \par
 The aircraft's configuration and utilization at present is as follows:
 \vspace{20pt}
@@ -30,19 +30,19 @@ The aircraft's configuration and utilization at present is as follows:
         \hline
          \textbf{Description} & \textbf{Type/Part No.} & \textbf{Serial No.} & \textbf{TSN [FH]} & \textbf{CSN [FC]}\\
          \hline
-         AIRCRAFT & @ACPN & @ACSN & @ACTSN & @ACFC \\
+         AIRCRAFT & \model & \MSN & \AircraftTFH & \AircraftTFC \\
          \hline
-         LH ENGINE & @LHEPN & @LHESN & @LHETSN & @LHEFC \\
+         LH ENGINE & \EngLHPN & \EngLHSN & \EngLHTFH & \EngLHTFC \\
          \hline
-         RH ENGINE & @RHEPN & @RHESN & @RHETSN & @RHEFC \\
+         RH ENGINE & \EngRHPN & \EngRHSN & \EngRHTFH & \EngRHTFC \\
          \hline
-         APU ENGINE & @APUPN & @APUSN & @APUTSN & @APUFC \\
+         APU ENGINE & \APUPN & \APUSN & \APUTFH & \APUTFC \\
          \hline
-         NOSE LANDING GEAR & @NLGPN & @NLGSN & @NLGTSN & @NLGFC \\
+         NOSE LANDING GEAR & \NoseLGPN & \NoseLGSN & \NoseLGTFH & \NoseLGTFC \\
          \hline
-         LH LANDING GEAR & @LLGPN & @LLGSN & @LLGTSN & @LLGFC \\
+         LH LANDING GEAR & \LeftLGPN & \LeftLGSN & \LeftLGTFH & \LeftLGTFC \\
          \hline
-         RH LANDING GEAR & @RLGPN & @RLGSN & @RLGTSN & @RLGFC \\
+         RH LANDING GEAR & \RightLGPN & \RightLGSN & \RightLGTFH & \RightLGTFC \\
          \hline
     \end{tabular}
 \end{center}
@@ -68,18 +68,18 @@ The aircraft's configuration and utilization at present is as follows:
 
  \begin{tabular}{c c}
 
-      \textbf{Organisation:} & @ORG\\
-      \textbf{Prepared by: } & @AUTHOR \\
-      \textbf{Signed by: } & @SIGNER \\
+      \textbf{Organisation:} & \organization\\
+      \textbf{Prepared by: } & \Author \\
+      \textbf{Signed by: } & \Signer \\
       \textbf{Signature: } & \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\
  \end{tabular}
 
 \vspace{20pt}
 
 \begin{tabular}{c}
-     @ORGFULLNAME \\
-     @ORGADDRESS \\
-     @ORGLINK
+     \organizationFullName \\
+     \organizationAddress \\
+     \organizationLink
 \end{tabular}
 
 \end{document}
