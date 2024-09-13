@@ -63,6 +63,4 @@ cur.execute("""
 """)
 
 database.commit()
-
-
 database.close()
