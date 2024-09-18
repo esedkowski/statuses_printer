@@ -21,6 +21,11 @@ cur.execute('CREATE TABLE aircraft (aircraftID INTEGER NOT NULL PRIMARY KEY AUTO
 
 cur.execute('CREATE TABLE mount (mountID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, positionID FOREGIN KEY REFERENCES position(positionID), aircraftID FOREGIN KEY REFERENCES aircraft(aircraftID), serialNumID FOREGIN KEY REFERENCES serialNum(serialNumID))')
 
+cur.execute('CREATE TABLE document (documentID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, docPath varchar(255) NOT NULL)')
+
+cur.execute('CREATE TABLE componentRefrences (componentRefrencesID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, name varchar(255) NOT NULL)')
+
+cur.execute('CREATE TABLE referencedMount (referencedMountID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, componentRefrencesID FOREGIN KEY REFERENCES componentRefrences(componentRefrencesID), mountID FOREGINKEY REFERENCES mount(mountID)')
 
 cur.execute("""
     INSERT INTO type (desc) VALUES
