@@ -29,7 +29,6 @@ cur.execute('CREATE TABLE model (modelID INTEGER NOT NULL PRIMARY KEY AUTOINCREM
 cur.execute('CREATE TABLE aircraft (aircraftID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, modelID FOREGIN KEY REFERENCES model(modelID) NOT NULL, msn varchar(255) NOT NULL, reg varchar(255) NOT NULL)')
 
 # assigment, couldn't come up with better name, connection between position-aircraft or parent component-child component, columns: ID, position ID, parent ID (aircraft or component, should be only one), child ID
-
 cur.execute('CREATE TABLE assigment (assigmentID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, positionID FOREGIN KEY REFERENCES position(positionID), aircraftID FOREGIN KEY REFERENCES aircraft(aircraftID), parentComponentID FOREGIN KEY REFERENCES serialNum(serialNumID), serialNumID FOREGIN KEY REFERENCES serialNum(serialNumID))')
 
 # documents, columns: ID, path
