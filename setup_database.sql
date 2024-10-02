@@ -30,11 +30,13 @@ CREATE TABLE partNum (
 	desc varchar(255) NOT NULL
 );
 
--- serial number, one SN can be assigned to one PN, but there can be many SN assigned to one PN, no need for description, columns: ID, PN ID, SN
+-- serial number, one SN can be assigned to one PN, but there can be many SN assigned to one PN, no need for description, columns: ID, PN ID, SN, total flight hours, total flight cycles
 CREATE TABLE serialNum (
 	serialNumID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
 	partNumID FOREGIN KEY REFERENCES partNum(partNumID) NOT NULL,
-	serialNum varchar(255) NOT NULL
+	serialNum varchar(255) NOT NULL,
+  TFH INTEGER,
+  TFC INTEGER
 );
 
 -- model, different versions of a type, which share ATA numbers, and most of the components, but might have other differences (i.e. B737-800), columns: ID, type ID, description
@@ -44,12 +46,16 @@ CREATE TABLE model (
 	desc varchar(255) NOT NULL
 );
 
--- aircraft, columns: ID, model ID, MSN (SN for A/C, invidual for each aircraft in type/model, won't change during aircraft operations), registration - individual for each A/C, but can change
+
+
+-- aircraft, columns: ID, model ID, MSN (SN for A/C, invidual for each aircraft in type/model, won't change during aircraft operations), registration - individual for each A/C, but can change, total flight hours, total flight cycles
 CREATE TABLE aircraft (
 	aircraftID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
 	modelID FOREGIN KEY REFERENCES model(modelID) NOT NULL,
 	msn varchar(255) NOT NULL,
-	reg varchar(255) NOT NULL
+	reg varchar(255) NOT NULL,
+  TFH INTEGER,
+  TFC INTEGER
 );
 
 -- assigment, couldn't come up with better name, connection between position-aircraft or parent component-child component, columns: ID, position ID, parent ID (aircraft or component, should be only one), child ID
@@ -59,6 +65,16 @@ CREATE TABLE assigment (
 	aircraftID FOREGIN KEY REFERENCES aircraft(aircraftID),
 	parentComponentID FOREGIN KEY REFERENCES serialNum(serialNumID),
 	serialNumID FOREGIN KEY REFERENCES serialNum(serialNumID)
+);
+
+-- flights
+CREATE TABLE flight (
+  flightID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  aircraftID FOREGIN KEY REFERENCES aircraft(aircraftID),
+  departureTime DATETIME NOT NULL,
+  arrivalTime DATETIME NOT NULL,
+  departureAirport varchar(255) NOT NULL,
+  arrivalAirport varchar(255) NOT NULL
 );
 
 -- documents, columns: ID, path
